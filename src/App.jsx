@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import PageSkeleton from "./components/PageSkeleton";
 import ScrollProgress from "./components/ScrollProgress";
 import { LanguageProvider } from "./context/LanguageContext";
 
@@ -20,7 +21,7 @@ function App() {
         <Navbar />
         <Hero />
 
-        <Suspense fallback={null}>
+        <Suspense fallback={<PageSkeleton />}>
           <About />
           <Transformations />
           <Services />
