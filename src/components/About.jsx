@@ -11,15 +11,17 @@ const { coach, about } = content;
 
     const [activeCoachImage, setActiveCoachImage] = useState(0);
 
+const mobileCoachImages = coach.images.slice(0, 3);
+
 const goToPreviousCoachImage = () => {
   setActiveCoachImage((current) =>
-    current === 0 ? coach.images.length - 1 : current - 1
+    current === 0 ? mobileCoachImages.length - 1 : current - 1
   );
 };
 
 const goToNextCoachImage = () => {
   setActiveCoachImage((current) =>
-    current === coach.images.length - 1 ? 0 : current + 1
+    current === mobileCoachImages.length - 1 ? 0 : current + 1
   );
 };
 
@@ -67,8 +69,8 @@ description={about.description}
     <div className="relative overflow-hidden rounded-[1.7rem] bg-black">
       <AnimatePresence mode="wait">
        <motion.img
-  key={coach.images[activeCoachImage]}
-  src={coach.images[activeCoachImage]}
+  key={mobileCoachImages[activeCoachImage]}
+src={mobileCoachImages[activeCoachImage]}
   alt={`${coach.name} ${activeCoachImage + 1}`}
   loading="lazy"
   decoding="async"
@@ -84,7 +86,7 @@ description={about.description}
 
       <div className="absolute left-4 top-4 rounded-full border border-yellow-400/25 bg-black/65 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-yellow-200 backdrop-blur-xl">
         {String(activeCoachImage + 1).padStart(2, "0")} /{" "}
-        {String(coach.images.length).padStart(2, "0")}
+        {String(mobileCoachImages.length).padStart(2, "0")}
       </div>
 
       <button
@@ -121,15 +123,15 @@ description={about.description}
           </h3>
 
           <p className="mt-1 text-sm font-medium text-white/55">
-            {about.coachImage} {activeCoachImage + 1} / {coach.images.length}
+            {about.coachImage} {activeCoachImage + 1} / {mobileCoachImages.length}
           </p>
         </motion.div>
       </div>
     </div>
   </div>
 
-  <div className="mt-4 grid grid-cols-5 gap-2">
-    {coach.images.map((image, index) => (
+  <div className="mt-4 grid grid-cols-3 gap-2">
+  {coach.images.slice(0, 3).map((image, index) => (
       <motion.button
         key={image}
         type="button"
@@ -171,7 +173,7 @@ description={about.description}
   </div>
 
   <div className="mt-3 flex items-center justify-center gap-1.5">
-    {coach.images.map((image, index) => (
+    {coach.images.slice(0, 3).map((image, index) => (
       <button
         key={`dot-${image}`}
         type="button"

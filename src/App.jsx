@@ -1,17 +1,14 @@
 // src/App.jsx
-import { lazy, Suspense } from "react";
+import About from "./components/About";
+import Contact from "./components/Contact";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import PageSkeleton from "./components/PageSkeleton";
 import ScrollProgress from "./components/ScrollProgress";
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
+import Transformations from "./components/Transformations";
 import { LanguageProvider } from "./context/LanguageContext";
-
-const About = lazy(() => import("./components/About"));
-const Transformations = lazy(() => import("./components/Transformations"));
-const Services = lazy(() => import("./components/Services"));
-const Testimonials = lazy(() => import("./components/Testimonials"));
-const Contact = lazy(() => import("./components/Contact"));
 
 function App() {
   return (
@@ -20,15 +17,11 @@ function App() {
         <ScrollProgress />
         <Navbar />
         <Hero />
-
-        <Suspense fallback={<PageSkeleton />}>
-          <About />
-          <Transformations />
-          <Services />
-          <Testimonials />
-          <Contact />
-        </Suspense>
-
+        <About />
+        <Transformations />
+        <Services />
+        <Testimonials />
+        <Contact />
         <FloatingWhatsApp />
       </main>
     </LanguageProvider>

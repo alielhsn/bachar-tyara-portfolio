@@ -1,10 +1,7 @@
 //src/components/Hero.jsx
-// src/components/Hero.jsx
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-import { preloadSections } from "../utils/preloadSections";
 
 function InstagramIcon({ className = "h-5 w-5" }) {
   return (
@@ -28,9 +25,6 @@ function Hero() {
   const { content, isArabic } = useLanguage();
 const { coach, hero } = content;
 
-useEffect(() => {
-  preloadSections();
-}, []);
 
   return (
     <section
