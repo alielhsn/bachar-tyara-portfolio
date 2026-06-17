@@ -9,38 +9,43 @@ const sharedImages = {
     "/images/coach/coach-5.jpg",
   ],
   clients: [
-    {
-      images: [
-        "/images/clients/client-1-before.jpg",
-        "/images/clients/client-1-after.jpg",
-        "/images/clients/client-1-extra.jpg",
-      ],
-    },
-    {
-      images: [
-        "/images/clients/client-2-before.jpg",
-        "/images/clients/client-2-after.jpg",
-      ],
-    },
-    {
-      images: [
-        "/images/clients/client-3-before.jpg",
-        "/images/clients/client-3-after.jpg",
-      ],
-    },
-    {
-      images: [
-        "/images/clients/client-4-before.jpg",
-        "/images/clients/client-4-after.jpg",
-      ],
-    },
-    {
-      images: [
-        "/images/clients/client-5-before.jpg",
-        "/images/clients/client-5-after.jpg",
-      ],
-    },
-  ],
+  {
+    images: [
+      "/images/clients/girl-client-1-before.jpg",
+      "/images/clients/girl-client-1-after.jpg",
+    ],
+  },
+  {
+    images: [
+      "/images/clients/client-2-before.jpg",
+      "/images/clients/client-2-after.jpg",
+    ],
+  },
+  {
+    images: [
+      "/images/clients/girl-client-2-before.jpg",
+      "/images/clients/girl-client-2-after.jpg",
+    ],
+  },
+  {
+    images: [
+      "/images/clients/client-3-before.jpg",
+      "/images/clients/client-3-after.jpg",
+    ],
+  },
+  {
+    images: [
+      "/images/clients/client-4-before.jpg",
+      "/images/clients/client-4-after.jpg",
+    ],
+  },
+  {
+    images: [
+      "/images/clients/client-5-before.jpg",
+      "/images/clients/client-5-after.jpg",
+    ],
+  },
+],
 };
 
 export const translations = {
@@ -60,21 +65,21 @@ export const translations = {
     coach: {
       name: "Coach Bashar",
       title: "Elite Personal Trainer",
-      slogan: "Transform your body. Upgrade your discipline. Become unstoppable.",
+      slogan: "Premium coaching for men and women who want strength, fat loss, shape, discipline, and real transformation.",
       location: "Lebanon",
       instagramUrl: "https://www.instagram.com/bashaar__t?igsh=Z2F5ZnQ1b2psdm9y",
       whatsappUrl: "https://wa.me/96181240946",
       mainImage: sharedImages.mainImage,
       images: sharedImages.coachImages,
-      bio: "A results-driven personal trainer focused on discipline, strength, transformation, and building a lifestyle that lasts. Every program is designed with precision, accountability, and premium follow-up.",
+      bio: "A results-driven personal trainer helping both men and women build stronger bodies, better shape, and real confidence through structured training, smart nutrition guidance, and premium follow-up.",
       specialties: [
-        "Fat Loss",
-        "Muscle Building",
-        "Body Recomposition",
-        "Strength Training",
-        "Online Coaching",
-        "Nutrition Guidance",
-      ],
+  "Men & Women Coaching",
+  "Fat Loss",
+  "Muscle Building",
+  "Body Toning",
+  "Body Recomposition",
+  "Nutrition Guidance",
+],
       stats: [
         {
           value: "9+",
@@ -92,7 +97,7 @@ export const translations = {
     },
 
     hero: {
-      badge: "Premium fitness transformation experience",
+      badge: "Premium transformations for men and women",
       titleTop: "Build Your",
       titleHighlight: "Legend Body",
       bookButton: "Book Your Plan",
@@ -106,7 +111,7 @@ export const translations = {
       eyebrow: "About The Coach",
       title: "Built Different. Coaching Different.",
       description:
-        "A premium training experience designed for people who want more than random workouts — they want structure, confidence, and visible results.",
+  "A premium training experience for men and women who want more than random workouts — they want structure, confidence, and visible results.",
       galleryBadge: "Elite Personal Trainer",
       coachImage: "Coach image",
       coachingTitle: "Coaching that turns effort into a",
@@ -137,32 +142,37 @@ export const translations = {
       labels: ["Before", "After", "Progress"],
       transformation: "Transformation",
       clients: [
-        {
-          name: "Bachar",
-          goal: "Muscle Gain",
-          images: sharedImages.clients[0].images,
-        },
-        {
-          name: "Mansour",
-          goal: "Muscle Gain",
-          images: sharedImages.clients[1].images,
-        },
-        {
-          name: "Rabih",
-          goal: "Body Recomposition",
-          images: sharedImages.clients[2].images,
-        },
-        {
-          name: "Ali",
-          goal: "Strength & Shape",
-          images: sharedImages.clients[3].images,
-        },
-        {
-          name: "Sammer",
-          goal: "Premium Coaching Result",
-          images: sharedImages.clients[4].images,
-        },
-      ],
+  {
+    name: "Female Transformation 01",
+    goal: "Fat Loss & Shape Transformation",
+    images: sharedImages.clients[0].images,
+  },
+  {
+    name: "Client 02",
+    goal: "Muscle Gain",
+    images: sharedImages.clients[1].images,
+  },
+  {
+    name: "Female Transformation 02",
+    goal: "Body Toning & Confidence",
+    images: sharedImages.clients[2].images,
+  },
+  {
+    name: "Client 03",
+    goal: "Body Recomposition",
+    images: sharedImages.clients[3].images,
+  },
+  {
+    name: "Client 04",
+    goal: "Strength & Shape",
+    images: sharedImages.clients[4].images,
+  },
+  {
+    name: "Client 05",
+    goal: "Premium Coaching Result",
+    images: sharedImages.clients[5].images,
+  },
+],
     },
 
     services: {
@@ -175,7 +185,7 @@ export const translations = {
         {
           title: "Personal Training",
           description:
-            "Private coaching sessions focused on strength, shape, posture, and performance.",
+  "Private coaching sessions for men and women focused on strength, shape, posture, and performance.",
         },
         {
           title: "Online Coaching",
@@ -272,21 +282,21 @@ export const translations = {
     coach: {
       name: "Coach Bashar",
       title: "مدرب شخصي محترف",
-      slogan: "غيّر جسمك. طوّر انضباطك. وابدأ نسخة أقوى من نفسك.",
+      slogan: "تدريب بريميوم للرجال والنساء لبناء القوة، خسارة الدهون، تحسين شكل الجسم، والوصول لتحول حقيقي.",
       location: "لبنان",
       instagramUrl: "https://www.instagram.com/bashaar__t?igsh=Z2F5ZnQ1b2psdm9y",
       whatsappUrl: "https://wa.me/96181240946",
       mainImage: sharedImages.mainImage,
       images: sharedImages.coachImages,
-      bio: "مدرب شخصي يركّز على النتائج، الانضباط، القوة، والتحول الحقيقي. كل برنامج يتم تصميمه بدقة حسب هدف العميل، مستواه، ونمط حياته مع متابعة احترافية للوصول لأفضل نتيجة.",
+      bio: "مدرب شخصي يساعد الرجال والنساء على بناء جسم أقوى، شكل أفضل، وثقة أعلى من خلال تدريب منظم، إرشاد غذائي ذكي، ومتابعة احترافية.",
       specialties: [
-        "خسارة الدهون",
-        "بناء العضلات",
-        "إعادة تشكيل الجسم",
-        "تمارين القوة",
-        "تدريب أونلاين",
-        "إرشاد غذائي",
-      ],
+  "تدريب رجال ونساء",
+  "خسارة الدهون",
+  "بناء العضلات",
+  "شد الجسم",
+  "إعادة تشكيل الجسم",
+  "إرشاد غذائي",
+],
       stats: [
         {
           value: "9+",
@@ -304,7 +314,7 @@ export const translations = {
     },
 
     hero: {
-      badge: "تجربة تدريب وتحول بدني بريميوم",
+      badge: "تحولات بريميوم للرجال والنساء",
       titleTop: "ابنِ جسمك",
       titleHighlight: "الأسطوري",
       bookButton: "احجز خطتك",
@@ -318,7 +328,7 @@ export const translations = {
       eyebrow: "عن المدرب",
       title: "تدريب مختلف. نتائج مختلفة.",
       description:
-        "تجربة تدريب بريميوم للأشخاص الذين لا يريدون تمارين عشوائية، بل يريدون خطة واضحة، ثقة، ونتائج ملموسة.",
+  "تجربة تدريب بريميوم للرجال والنساء الذين لا يريدون تمارين عشوائية، بل يريدون خطة واضحة، ثقة، ونتائج ملموسة.",
       galleryBadge: "مدرب شخصي محترف",
       coachImage: "صورة المدرب",
       coachingTitle: "تدريب يحوّل مجهودك إلى",
@@ -349,32 +359,37 @@ export const translations = {
       labels: ["قبل", "بعد", "تقدم"],
       transformation: "تحول",
       clients: [
-        {
-          name: "بشار",
-          goal: "بناء عضلات",
-          images: sharedImages.clients[0].images,
-        },
-        {
-          name: "منصور",
-          goal: "بناء عضلات",
-          images: sharedImages.clients[1].images,
-        },
-        {
-          name: "ربيع",
-          goal: "إعادة تشكيل الجسم",
-          images: sharedImages.clients[2].images,
-        },
-        {
-          name: "علي",
-          goal: "قوة وشكل أفضل",
-          images: sharedImages.clients[3].images,
-        },
-        {
-          name: "سامر",
-          goal: "نتيجة تدريب بريميوم",
-          images: sharedImages.clients[4].images,
-        },
-      ],
+  {
+    name: "تحول نسائي 01",
+    goal: "خسارة دهون وتحسين شكل الجسم",
+    images: sharedImages.clients[0].images,
+  },
+  {
+    name: "العميل 02",
+    goal: "بناء عضلات",
+    images: sharedImages.clients[1].images,
+  },
+  {
+    name: "تحول نسائي 02",
+    goal: "شد الجسم وزيادة الثقة",
+    images: sharedImages.clients[2].images,
+  },
+  {
+    name: "العميل 03",
+    goal: "إعادة تشكيل الجسم",
+    images: sharedImages.clients[3].images,
+  },
+  {
+    name: "العميل 04",
+    goal: "قوة وشكل أفضل",
+    images: sharedImages.clients[4].images,
+  },
+  {
+    name: "العميل 05",
+    goal: "نتيجة تدريب بريميوم",
+    images: sharedImages.clients[5].images,
+  },
+],
     },
 
     services: {
@@ -387,7 +402,7 @@ export const translations = {
         {
           title: "تدريب شخصي",
           description:
-            "جلسات تدريب خاصة تركّز على القوة، الشكل، الوضعية، والأداء.",
+  "جلسات تدريب خاصة للرجال والنساء تركّز على القوة، الشكل، الوضعية، والأداء.",
         },
         {
           title: "تدريب أونلاين",
