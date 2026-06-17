@@ -1,48 +1,48 @@
 //src/data/translations.js
 const sharedImages = {
-  mainImage: "/images/coach/coach-1.jpg",
+  mainImage: "/images/coach/coach-1.webp",
   coachImages: [
-    "/images/coach/coach-1.jpg",
-    "/images/coach/coach-2.jpg",
-    "/images/coach/coach-3.jpg",
-    "/images/coach/coach-4.jpg",
-    "/images/coach/coach-5.jpg",
+    "/images/coach/coach-1.webp",
+    "/images/coach/coach-2.webp",
+    "/images/coach/coach-3.webp",
+    "/images/coach/coach-4.webp",
+    "/images/coach/coach-5.webp",
   ],
   clients: [
   {
     images: [
-      "/images/clients/girl-client-1-before.jpg",
-      "/images/clients/girl-client-1-after.jpg",
+      "/images/clients/girl-client-1-before.webp",
+      "/images/clients/girl-client-1-after.webp",
     ],
   },
   {
     images: [
-      "/images/clients/client-2-before.jpg",
-      "/images/clients/client-2-after.jpg",
+      "/images/clients/client-2-before.webp",
+      "/images/clients/client-2-after.webp",
     ],
   },
   {
     images: [
-      "/images/clients/girl-client-2-before.jpg",
-      "/images/clients/girl-client-2-after.jpg",
+      "/images/clients/girl-client-2-before.webp",
+      "/images/clients/girl-client-2-after.webp",
     ],
   },
   {
     images: [
-      "/images/clients/client-3-before.jpg",
-      "/images/clients/client-3-after.jpg",
+      "/images/clients/client-3-before.webp",
+      "/images/clients/client-3-after.webp",
     ],
   },
   {
     images: [
-      "/images/clients/client-4-before.jpg",
-      "/images/clients/client-4-after.jpg",
+      "/images/clients/client-4-before.webp",
+      "/images/clients/client-4-after.webp",
     ],
   },
   {
     images: [
-      "/images/clients/client-5-before.jpg",
-      "/images/clients/client-5-after.jpg",
+      "/images/clients/client-5-before.webp",
+      "/images/clients/client-5-after.webp",
     ],
   },
 ],

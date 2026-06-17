@@ -66,10 +66,12 @@ description={about.description}
 
     <div className="relative overflow-hidden rounded-[1.7rem] bg-black">
       <AnimatePresence mode="wait">
-        <motion.img
-          key={coach.images[activeCoachImage]}
-          src={coach.images[activeCoachImage]}
-          alt={`${coach.name} ${activeCoachImage + 1}`}
+       <motion.img
+  key={coach.images[activeCoachImage]}
+  src={coach.images[activeCoachImage]}
+  alt={`${coach.name} ${activeCoachImage + 1}`}
+  loading="lazy"
+  decoding="async"
           initial={{ opacity: 0, scale: 1.08, x: 24 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           exit={{ opacity: 0, scale: 0.96, x: -24 }}
@@ -144,10 +146,14 @@ description={about.description}
         aria-label={`Show coach image ${index + 1}`}
       >
         <img
-          src={image}
-          alt={`${coach.name} thumbnail ${index + 1}`}
-          className="h-20 w-full rounded-xl object-cover object-center"
-        />
+  src={image}
+  alt={`${coach.name} thumbnail ${index + 1}`}
+  loading="lazy"
+  decoding="async"
+  width="180"
+  height="180"
+  className="h-20 w-full rounded-xl object-cover object-center"
+/>
 
         <div
           className={`absolute inset-1 rounded-xl transition ${
@@ -202,10 +208,14 @@ description={about.description}
                 className={`absolute overflow-hidden rounded-[2rem] border border-yellow-400/20 bg-white/5 p-2 shadow-[0_30px_80px_rgba(0,0,0,0.65)] backdrop-blur-xl ${positions[index]}`}
               >
                 <img
-                  src={image}
-                  alt={`${coach.name} ${index + 1}`}
-                  className="h-full w-full rounded-[1.5rem] object-cover object-center"
-                />
+  src={image}
+  alt={`${coach.name} ${index + 1}`}
+  loading="lazy"
+  decoding="async"
+  width="420"
+  height="560"
+  className="h-full w-full rounded-[1.5rem] object-cover object-center"
+/>
               </motion.div>
             ))}
           </motion.div>

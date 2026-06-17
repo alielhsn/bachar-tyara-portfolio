@@ -19,10 +19,14 @@ function TransformationCard({ client, index, labels, transformation }) {
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-white/5 opacity-100 md:opacity-0 md:transition md:duration-500 md:group-hover:opacity-100" />
 
       <div className="relative overflow-hidden rounded-[1.25rem] bg-black sm:rounded-[1.5rem]">
-        <motion.img
-          key={client.images[activeImage]}
-          src={client.images[activeImage]}
-          alt={`${client.name} ${labels[activeImage] || "Transformation"}`}
+       <motion.img
+  key={client.images[activeImage]}
+  src={client.images[activeImage]}
+  alt={`${client.name} ${labels[activeImage] || "Transformation"}`}
+  loading="lazy"
+  decoding="async"
+  width="900"
+  height="1200"
           initial={{ opacity: 0.55, scale: 1.03 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.35 }}

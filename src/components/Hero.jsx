@@ -108,10 +108,15 @@ const { coach, hero } = content;
             </div>
 
             <img
-              src={coach.mainImage}
-              alt={coach.name}
-              className="h-[430px] w-full rounded-[1.5rem] object-cover object-center sm:h-[500px] md:h-[560px] md:rounded-[1.8rem]"
-            />
+  src={coach.mainImage}
+  alt={coach.name}
+  loading="eager"
+  fetchPriority="high"
+  decoding="async"
+  width="900"
+  height="1200"
+  className="h-[430px] w-full rounded-[1.5rem] object-cover object-center sm:h-[500px] md:h-[560px] md:rounded-[1.8rem]"
+/>
 
             <a
               href={coach.whatsappUrl}

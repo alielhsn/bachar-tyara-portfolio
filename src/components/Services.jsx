@@ -88,10 +88,14 @@ const servicesList = services.list;
             className="relative overflow-hidden rounded-[2rem]"
           >
             <img
-              src={coach.images?.[1] || coach.mainImage}
-              alt={coach.name}
-              className="h-[390px] w-full object-cover object-center sm:h-[460px] md:h-[520px]"
-            />
+  src={coach.images?.[1] || coach.mainImage}
+  alt={coach.name}
+  loading="lazy"
+  decoding="async"
+  width="900"
+  height="1200"
+  className="h-[390px] w-full object-cover object-center sm:h-[460px] md:h-[520px]"
+/>
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
