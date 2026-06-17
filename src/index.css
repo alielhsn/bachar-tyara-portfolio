@@ -132,3 +132,34 @@ section {
     transform: none !important;
   }
 }
+
+/* iPhone Safari / Chrome iOS safety fix */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 767px) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    section:not(#home) [style*="opacity: 0"],
+    section:not(#home) [style*="opacity:0"] {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    section:not(#home) [style*="translate"] {
+      transform: none !important;
+    }
+
+    section:not(#home) .backdrop-blur-xl,
+    section:not(#home) .backdrop-blur-2xl {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    section:not(#home) .shadow-\[0_24px_75px_rgba\(0\,0\,0\,0\.45\)\],
+    section:not(#home) .shadow-\[0_24px_75px_rgba\(0\,0\,0\,0\.5\)\],
+    section:not(#home) .shadow-\[0_30px_90px_rgba\(0\,0\,0\,0\.65\)\] {
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.42) !important;
+    }
+  }
+}
