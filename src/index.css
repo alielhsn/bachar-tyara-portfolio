@@ -133,33 +133,38 @@ section {
   }
 }
 
-/* iPhone Safari / Chrome iOS safety fix */
+/* Strong iPhone Safari / Chrome iOS fix */
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 767px) {
     html {
-      scroll-behavior: auto;
+      scroll-behavior: auto !important;
     }
 
-    section:not(#home) [style*="opacity: 0"],
-    section:not(#home) [style*="opacity:0"] {
+    body {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    section:not(#home),
+    section:not(#home) * {
       opacity: 1 !important;
       transform: none !important;
-    }
-
-    section:not(#home) [style*="translate"] {
-      transform: none !important;
+      animation: none !important;
+      transition-duration: 0s !important;
     }
 
     section:not(#home) .backdrop-blur-xl,
-    section:not(#home) .backdrop-blur-2xl {
+    section:not(#home) .backdrop-blur-2xl,
+    section:not(#home) [class*="backdrop-blur"] {
       backdrop-filter: none !important;
       -webkit-backdrop-filter: none !important;
     }
 
-    section:not(#home) .shadow-\[0_24px_75px_rgba\(0\,0\,0\,0\.45\)\],
-    section:not(#home) .shadow-\[0_24px_75px_rgba\(0\,0\,0\,0\.5\)\],
-    section:not(#home) .shadow-\[0_30px_90px_rgba\(0\,0\,0\,0\.65\)\] {
-      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.42) !important;
+    section:not(#home) [class*="blur-"] {
+      filter: blur(55px) !important;
+    }
+
+    section:not(#home) [class*="shadow-"] {
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.38) !important;
     }
   }
 }
