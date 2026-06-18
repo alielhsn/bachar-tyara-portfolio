@@ -1,5 +1,4 @@
 //src/components/Testimonials.jsx
-import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
@@ -22,7 +21,7 @@ const { testimonials } = content;
 
         <div className="mt-10 grid gap-5 sm:gap-6 md:mt-16 md:grid-cols-3">
           {testimonials.list.map((item, index) => (
-            <motion.article
+            <article
               key={item.name}
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +61,7 @@ const { testimonials } = content;
                   </p>
                 </div>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>

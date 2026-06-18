@@ -1,5 +1,4 @@
 //src/components/Contact.jsx
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   Dumbbell,
@@ -35,11 +34,7 @@ const { coach, contact, footer } = content;
       <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-500/15 blur-[150px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 35, scale: 0.96 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="relative overflow-hidden rounded-[2rem] border border-yellow-400/20 bg-white/[0.05] p-5 text-center shadow-[0_32px_95px_rgba(0,0,0,0.65)] backdrop-blur-xl sm:p-8 md:rounded-[3rem] md:p-14"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-white/5" />
@@ -88,7 +83,7 @@ const { coach, contact, footer } = content;
               {coach.location}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <footer className="mt-14 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-center md:flex-row md:text-left">
           <div>

@@ -1,6 +1,5 @@
 //src/components/About.jsx
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { Award, ChevronLeft, ChevronRight, Dumbbell, Flame, ShieldCheck } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
@@ -55,11 +54,7 @@ description={about.description}
 
         <div className="mt-12 grid items-center gap-12 lg:mt-20 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           {/* Mobile animated coach gallery */}
-<motion.div
-  initial={{ opacity: 0, y: 22 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.25 }}
-  transition={{ duration: 0.6 }}
+<div
   className="lg:hidden"
 >
   <div className="relative overflow-hidden rounded-[2.2rem] border border-yellow-400/20 bg-white/[0.055] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.65)] backdrop-blur-xl">
@@ -67,20 +62,14 @@ description={about.description}
     <div className="absolute -right-20 bottom-10 h-56 w-56 rounded-full bg-white/10 blur-[90px]" />
 
     <div className="relative overflow-hidden rounded-[1.7rem] bg-black">
-      <AnimatePresence mode="wait">
-       <motion.img
+       <img
   key={mobileCoachImages[activeCoachImage]}
 src={mobileCoachImages[activeCoachImage]}
   alt={`${coach.name} ${activeCoachImage + 1}`}
   loading="lazy"
   decoding="async"
-          initial={{ opacity: 0, scale: 1.08, x: 24 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
-          exit={{ opacity: 0, scale: 0.96, x: -24 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
           className="h-[440px] w-full object-cover object-center"
         />
-      </AnimatePresence>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/20" />
 
@@ -108,7 +97,7 @@ src={mobileCoachImages[activeCoachImage]}
       </button>
 
       <div className="absolute bottom-4 left-4 right-4">
-        <motion.div
+        <div
           key={`coach-caption-${activeCoachImage}`}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -125,22 +114,18 @@ src={mobileCoachImages[activeCoachImage]}
           <p className="mt-1 text-sm font-medium text-white/55">
             {about.coachImage} {activeCoachImage + 1} / {mobileCoachImages.length}
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   </div>
 
   <div className="mt-4 grid grid-cols-3 gap-2">
   {coach.images.slice(0, 3).map((image, index) => (
-      <motion.button
+      <button
         key={image}
         type="button"
         onClick={() => setActiveCoachImage(index)}
-        initial={{ opacity: 0, y: 18 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.45, delay: index * 0.05 }}
-        className={`relative overflow-hidden rounded-2xl border p-1 shadow-[0_16px_45px_rgba(0,0,0,0.45)] transition active:scale-95 ${
+       className={`relative overflow-hidden rounded-2xl border p-1 shadow-[0_16px_45px_rgba(0,0,0,0.45)] transition active:scale-95 ${
           activeCoachImage === index
             ? "border-yellow-400 bg-yellow-400/15"
             : "border-yellow-400/15 bg-white/[0.04]"
@@ -168,7 +153,7 @@ src={mobileCoachImages[activeCoachImage]}
         <span className="absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-2 py-0.5 text-[0.58rem] font-black text-white backdrop-blur-xl">
           {index + 1}
         </span>
-      </motion.button>
+      </button>
     ))}
   </div>
 
@@ -187,26 +172,17 @@ src={mobileCoachImages[activeCoachImage]}
       />
     ))}
   </div>
-</motion.div>
+</div>
 
           {/* Desktop floating collage */}
-          <motion.div
-            initial={{ opacity: 0, y: 26 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.75 }}
+          <div
             className="relative hidden min-h-[560px] lg:block"
           >
             <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-yellow-400/20 bg-yellow-400/5 shadow-[0_0_120px_rgba(250,204,21,0.12)]" />
 
             {coach.images.map((image, index) => (
-              <motion.div
+              <div
                 key={image}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.08 }}
-                whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
                 className={`absolute overflow-hidden rounded-[2rem] border border-yellow-400/20 bg-white/5 p-2 shadow-[0_30px_80px_rgba(0,0,0,0.65)] backdrop-blur-xl ${positions[index]}`}
               >
                 <img
@@ -218,16 +194,12 @@ src={mobileCoachImages[activeCoachImage]}
   height="560"
   className="h-full w-full rounded-[1.5rem] object-cover object-center"
 />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 26 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.65 }}
-          >
+          <div
+            >
             <div className="inline-flex items-center gap-3 rounded-full border border-yellow-400/20 bg-yellow-400/10 px-4 py-3 text-xs font-bold text-yellow-200 sm:px-5 sm:text-sm">
               <Dumbbell className="h-4 w-4 shrink-0" />
               {coach.title}
@@ -258,12 +230,8 @@ src={mobileCoachImages[activeCoachImage]}
                 const Icon = card.icon;
 
                 return (
-                  <motion.div
+                  <div
                     key={card.title}
-                    initial={{ opacity: 0, y: 22 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.25 }}
-                    transition={{ duration: 0.55, delay: index * 0.06 }}
                     className="glass-card group rounded-[1.5rem] p-4 transition active:scale-[0.99] sm:rounded-[2rem] sm:p-5 md:hover:-translate-y-1 md:hover:border-yellow-400/35"
                   >
                     <div className="flex gap-3 sm:gap-4">
@@ -280,11 +248,11 @@ src={mobileCoachImages[activeCoachImage]}
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

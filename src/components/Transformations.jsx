@@ -1,6 +1,5 @@
 //src/components/Transformations.jsx
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { ArrowUpRight, Trophy } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
@@ -9,17 +8,13 @@ function TransformationCard({ client, index, labels, transformation }) {
   const [activeImage, setActiveImage] = useState(0);
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 26 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.6, delay: Math.min(index * 0.05, 0.18) }}
+    <article
       className="group relative w-full max-w-full overflow-hidden rounded-[1.6rem] border border-yellow-400/15 bg-white/[0.04] p-2.5 shadow-[0_24px_75px_rgba(0,0,0,0.5)] backdrop-blur-xl transition active:scale-[0.99] sm:rounded-[2rem] sm:p-3 md:hover:-translate-y-2 md:hover:border-yellow-400/35"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-white/5 opacity-100 md:opacity-0 md:transition md:duration-500 md:group-hover:opacity-100" />
 
       <div className="relative overflow-hidden rounded-[1.25rem] bg-black sm:rounded-[1.5rem]">
-       <motion.img
+       <img
   key={client.images[activeImage]}
   src={client.images[activeImage]}
   alt={`${client.name} ${labels[activeImage] || "Transformation"}`}
@@ -27,9 +22,6 @@ function TransformationCard({ client, index, labels, transformation }) {
   decoding="async"
   width="900"
   height="1200"
-          initial={{ opacity: 0.55, scale: 1.03 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.35 }}
           className="h-[390px] w-full object-cover object-center transition duration-700 sm:h-[430px] md:group-hover:scale-105"
         />
 
@@ -76,7 +68,7 @@ function TransformationCard({ client, index, labels, transformation }) {
           </div>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }
 

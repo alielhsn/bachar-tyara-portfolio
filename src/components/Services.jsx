@@ -1,5 +1,4 @@
 //src/components/Services.jsx
-import { motion } from "framer-motion";
 import {
   Activity,
   ArrowRight,
@@ -42,12 +41,8 @@ const servicesList = services.list;
             const Icon = serviceIcons[index] || Dumbbell;
 
             return (
-              <motion.article
+              <article
                 key={service.title}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.7, delay: index * 0.08 }}
                 className="group relative overflow-hidden rounded-[1.6rem] border border-yellow-400/15 bg-white/[0.04] p-5 shadow-[0_24px_75px_rgba(0,0,0,0.45)] backdrop-blur-xl transition duration-500 active:scale-[0.99] sm:rounded-[2rem] sm:p-6 md:hover:-translate-y-2 md:hover:border-yellow-400/40"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-white/5 opacity-0 transition duration-500 group-hover:opacity-100" />
@@ -74,17 +69,13 @@ const servicesList = services.list;
                     <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
-              </motion.article>
+              </article>
             );
           })}
         </div>
 
         <div className="mt-14 grid items-center gap-8 rounded-[2rem] border border-yellow-400/15 bg-white/[0.04] p-4 shadow-[0_28px_85px_rgba(0,0,0,0.5)] backdrop-blur-xl sm:p-6 md:mt-24 md:gap-10 md:rounded-[2.5rem] md:p-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <motion.div
-            initial={{ opacity: 0, x: -35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="relative overflow-hidden rounded-[2rem]"
           >
             <img
@@ -108,15 +99,11 @@ const servicesList = services.list;
                 {services.imageTitle}
               </h3>
             </div>
-          </motion.div>
+          </div>
 
           <div>
-            <motion.div
-              initial={{ opacity: 0, x: 35 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+              >
               <p className="text-sm font-black uppercase tracking-[0.35em] text-yellow-400">
                 {services.whyEyebrow}
               </p>
@@ -129,19 +116,15 @@ const servicesList = services.list;
               <p className="mt-5 text-base leading-8 text-white/60 sm:text-lg sm:leading-9 md:mt-6">
                 {services.whyText}
               </p>
-            </motion.div>
+            </div>
 
             <div className="mt-9 grid gap-4">
               {reasons.map((reason, index) => {
                 const Icon = reason.icon;
 
                 return (
-                  <motion.div
+                  <div
                     key={reason.title}
-                    initial={{ opacity: 0, y: 25 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.25 }}
-                    transition={{ duration: 0.65, delay: index * 0.08 }}
                     className="rounded-[2rem] border border-white/10 bg-black/25 p-5 transition hover:-translate-y-1 hover:border-yellow-400/30"
                   >
                     <div className="flex gap-4">
@@ -158,7 +141,7 @@ const servicesList = services.list;
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>

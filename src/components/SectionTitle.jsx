@@ -1,15 +1,7 @@
-//src/components/SectionTitle.jsx
-import { motion } from "framer-motion";
-
+// src/components/SectionTitle.jsx
 function SectionTitle({ eyebrow, title, description }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.55, ease: "easeOut" }}
-      className="mx-auto max-w-3xl text-center"
-    >
+    <div className="mx-auto max-w-3xl text-center">
       <p className="text-xs font-bold uppercase tracking-[0.24em] text-yellow-400 sm:text-sm sm:tracking-[0.35em]">
         {eyebrow}
       </p>
@@ -23,7 +15,7 @@ function SectionTitle({ eyebrow, title, description }) {
           {description}
         </p>
       )}
-    </motion.div>
+    </div>
   );
 }
 
