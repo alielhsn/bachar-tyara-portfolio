@@ -1,6 +1,6 @@
 //src/data/translations.js
 const sharedImages = {
-  mainImage: "/images/coach/coach-1.webp",
+  mainImage: "/images/coach/coach-5.webp",
   coachImages: [
     "/images/coach/coach-1.webp",
     "/images/coach/coach-2.webp",
